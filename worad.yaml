@@ -1,7 +1,7 @@
 port: 7890
 socks-port: 7891
 allow-lan: true
-mode: Rule
+mode: Global
 log-level: info
 external-controller: :9090
 dns:
@@ -15,9 +15,9 @@ dns:
   fallback: [tls://1.0.0.1:853, https://cloudflare-dns.com/dns-query, https://dns.google/dns-query]
   fallback-filter: {geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32]}
 proxies:
-  - {name: 🇹🇼 TAKI台灣, server: 61.219.247.67, port: 52664, type: ss, cipher: chacha20-ietf-poly1305, password: 21064159-2f54-4ea8-f9cc-5cf8f271da1b, udp: true}
-  - {name: 🇹🇼 日本to台灣, server: 35.194.96.241, port: 14395, type: ss, cipher: chacha20-ietf-poly1305, password: 21064159-2f54-4ea8-f9cc-5cf8f271da1b, udp: true}
-  - {name: 🇯🇵 Google日本, server: 35.194.96.241, port: 30338, type: ss, cipher: chacha20-ietf-poly1305, password: bb105bb1-abf7-40cc-e308-cd4216c075fb, udp: true}
+  - {name: 🇹🇼 TAKI台灣, server: 61.219.247.67, port: 33986, type: ss, cipher: chacha20-ietf-poly1305, password: 25d67db6-a05f-4551-b6ba-f4fb12df4efe, udp: true}
+  - {name: 🇹🇼 日本to台灣, server: 35.200.113.24, port: 14395, type: ss, cipher: chacha20-ietf-poly1305, password: 25d67db6-a05f-4551-b6ba-f4fb12df4efe, udp: true}
+  - {name: 🇯🇵 Google日本, server: 35.200.113.24, port: 30338, type: ss, cipher: chacha20-ietf-poly1305, password: bb105bb1-abf7-40cc-e308-cd4216c075fb, udp: true}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
